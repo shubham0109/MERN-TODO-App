@@ -4,7 +4,8 @@ const app = express() // generate an app object
 const bodyParser = require("body-parser") // requiring the body-parser
 const PORT = process.env.PORT || 3000 // port that the server is running on => localhost:3000
 
-
+const cors = require('cors');
+app.use(cors());
 
 app.use(bodyParser.json()) // telling the app that we are going to use json to handle incoming payload
 
